@@ -5,7 +5,7 @@
 
 
 // Mouse Over button
-const button = document.querySelector('.content-pick .destination .btn');
+const button = document.querySelector('.btn');
 button.addEventListener('mouseover', (event)=> {
     event.target.style.color = "gray";
     console.log(`this is my mouse!`);
@@ -20,7 +20,8 @@ button.addEventListener('mouseover', (event)=> {
 // PRESS A KEYBOARD KEY AND THE BODY WILL CHANGE TO GRAY
 const body = document.querySelector('body');
 body.addEventListener('keydown', (event) => {
-     event.style.background = 'gray';
+     event.target.style.background = 'gray';
+     console.log('body changed to gray!');
 });
 
 //Wheel
@@ -61,9 +62,8 @@ funBusImg.addEventListener('drag', (event) => event.target.style.height = '400px
 
 
 //dbclick
+// ADD A NEW COLOR TO NAV LINKS IF THEY ARE DBLCLICKED
 const navTag = document.querySelector(".nav");
-
-// ADD A BACKGROUND COLOR TO NAV LINKS IF THEY ARE DBLCLICKED
 navTag.addEventListener("dblclick", (event) => {
   event.target.style.color = 'gray';
 });
