@@ -41,25 +41,32 @@ setTimeout(() => {
 const funBusBanner = document.querySelector(".intro img" );
 
 // DRAG THE FUN-BUS INTRO IMAGE TO INCREASE THE HEIGHT TO 400PX
-funBusBanner.addEventListener('drag', (event) => event.target.style.height = '400px');
+const funBusImg = document.querySelector(".intro img" );
+funBusImg.addEventListener('drag', (event) => event.target.style.height = '400px');
+
+
+
+// Load
+
+
+
 
 //Focus 
-const focus = document.querySelector('.intro > img');
-
-focus.addEventListener('focus', (event) => {
-  event.target.style.background = 'gray';  
-  console.log('background gray!')  
-});
 
 
+
+//Select
 
 
 
 
 //dbclick
-const navItems = document.querySelector('.nav-link');
-navItems.addEventListener('dbclick', (event) =>{
-        event.target.style.color = 'blue';
-        console.log('changed the nav links color!')
+const navTag = document.querySelector(".nav");
+
+// ADD A BACKGROUND COLOR TO NAV LINKS IF THEY ARE DBLCLICKED
+navTag.addEventListener("dblclick", (event) => {
+  event.target.style.color = 'gray';
 });
+
+
 
