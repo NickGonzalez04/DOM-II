@@ -49,10 +49,17 @@ funBusImg.addEventListener('drag', (event) => event.target.style.height = '400px
 
 // Load
 
-
+window.addEventListener("load", (event) => {
+    alert("You're about to enter an active web page that has unique changes")gti ad;
+  });
 
 
 //Focus 
+
+
+
+//Scroll
+
 
 
 
