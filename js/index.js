@@ -24,6 +24,12 @@ body.addEventListener('keydown', (event) => {
      console.log('body changed to gray!');
 });
 
+//Keyup
+const bodyBack = document.querySelector('body');
+bodyBack.addEventListener('keyup', (event) => {
+     event.target.style.background = "";
+     console.log('body changed back!');
+});
 //Wheel
 // WHEELS OVER BODY AND INCREASES THE FONT SIZE THROUGHT THE PAGE
 
@@ -39,7 +45,6 @@ setTimeout(() => {
 
 //DRAG
 
-const funBusBanner = document.querySelector(".intro img" );
 
 // DRAG THE FUN-BUS INTRO IMAGE TO INCREASE THE HEIGHT TO 400PX
 const funBusImg = document.querySelector(".intro img" );
@@ -50,13 +55,16 @@ funBusImg.addEventListener('drag', (event) => event.target.style.height = '400px
 // Load
 
 window.addEventListener("load", (event) => {
-    alert("You're about to enter an active web page that has unique changes")gti ad;
+    alert("You're about to enter an active web page that has unique changes");
   });
 
 
-//Focus 
+//Focus
 
 
+
+//RESIZE
+window.addEventListener('resize', () => alert("YOU'RE MAKING THE PAGE SIZE CHANGE !!!!")) 
 
 //Scroll
 
@@ -64,7 +72,6 @@ window.addEventListener("load", (event) => {
 
 
 //Select
-
 
 
 
