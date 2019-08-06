@@ -1,5 +1,9 @@
 // Your code goes here
 
+
+
+
+
 // Mouse Over button
 const button = document.querySelector('.content-pick .destination .btn');
 button.addEventListener('mouseover', (event)=> {
@@ -20,29 +24,42 @@ body.addEventListener('keydown', (event) => {
 });
 
 //Wheel
-// WHEELS OVER "WELCOME" AND INCREASES THE FONT SIZE
+// WHEELS OVER BODY AND INCREASES THE FONT SIZE THROUGHT THE PAGE
 
-const funBus = document.querySelector('.intro h2');
+const funBus = document.querySelector('body');
 funBus.addEventListener('wheel', (event)=> {
-event.target.style.fontSize = '80px';
+event.target.style.fontSize = '25px';
 console.log('font zoom!')
 
 setTimeout(() => {
     event.target.style.fontSize = "";
-}, 600);
+}, 700);
 }, false);
 
 //DRAG
 
-const funBusBanner = document.querySelector(".intro > img" );
+const funBusBanner = document.querySelector(".intro img" );
 
-// DRAG THE FUN-BUS INTRO IMAGE TO SCALE IT 150% IN SIZE
-funBusBanner.addEventListener('drag', (e) => e.target.style.transform = 'scale(1.5)');
+// DRAG THE FUN-BUS INTRO IMAGE TO INCREASE THE HEIGHT TO 400PX
+funBusBanner.addEventListener('drag', (event) => event.target.style.height = '400px');
 
 //Focus 
-const focus = document.querySelector('.intro');
+const focus = document.querySelector('.intro > img');
 
 focus.addEventListener('focus', (event) => {
   event.target.style.background = 'gray';  
-  console.log('backgroun gray!')  
+  console.log('background gray!')  
 });
+
+
+
+
+
+
+//dbclick
+const navItems = document.querySelector('.nav-link');
+navItems.addEventListener('dbclick', (event) =>{
+        event.target.style.color = 'blue';
+        console.log('changed the nav links color!')
+});
+
